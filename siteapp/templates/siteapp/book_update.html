@@ -1,0 +1,19 @@
+{%extends 'siteapp/base_index.html'%}
+
+
+
+{% block content%}
+  <form class="" action="{% url 'book_update_url' slug=book.slug %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group">
+        {{field.label}}
+        {{field}}
+      </div>
+
+
+    {% endfor %}
+    <button type="submit" name="button">Создать</button>
+
+  </form>
+{% endblock %}

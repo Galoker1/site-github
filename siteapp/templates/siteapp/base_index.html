@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<title></title>
+</head>
+<body>
+<div class="head"><p class='zag'>Pythonmaster</p>
+	<div class="line">
+
+	</div>
+	<a href="{% url 'main_page'%}">	<div class="submenu sub1"id=one><p class="submenu_text" >Главная</p></div></a>
+	<a href="{% url 'book_list_url'%}"><div class="submenu sub2"id="two"><p class="submenu_text" >Книги</p></div></a>
+	<div class="submenu sub3"id="three"><p class="submenu_text" >Видео</p></div>
+	<div class="submenu sub4"id="four"><p class="submenu_text" >Софт</p></div>
+</div>
+
+<div class="sidebar">
+
+
+</div>
+<div class="content">
+
+{% block content%}
+
+{% endblock %}
+
+
+</div>
+
+<div class="footer"></div>
+
+{%block script%}
+
+{%endblock%}
+
+</body>
+</html>

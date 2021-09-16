@@ -1,0 +1,24 @@
+{%extends 'siteapp/base_index.html'%}
+
+{% block content%}
+
+
+{% for book in books%}
+
+
+
+	<a href="{%url 'book_detail_url' slug=book.slug%}">
+<img class="book_image" src="{{book.image}}">
+</a>
+
+{% endfor %}
+
+{% endblock %}
+
+{%block script%}
+<script type="text/javascript">
+    let names=document.getElementsByClassName;
+      console.log(names.innerHTML);
+
+</script>
+{%endblock%}

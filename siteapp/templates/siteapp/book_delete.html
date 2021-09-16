@@ -1,0 +1,10 @@
+{% extends 'siteapp/base_index.html'%}
+
+{% block content%}
+<h1>{{book.title}}</h1>
+<form class="" action="{% url 'book_delete_url' slug=book.slug %}" method="post">
+  {% csrf_token %}
+  <button type="submit" name="button">delete</button>
+
+</form>
+{% endblock %}
